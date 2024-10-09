@@ -1,0 +1,12 @@
+<div>
+  <h1>adding a person</h1>
+  <form (submit)="AddPerson(); $event.preventDefault()">
+    <input [(ngModel)]="NewPerson.Name" type="text" placeholder="Name" required>
+    <input [(ngModel)]="newPerson.Surname" placeholder="Surname" required />
+    <input [(ngModel)]="newPerson.Email" placeholder="Email" required />
+    <input [(ngModel)]="newPerson.PhoneNumber" placeholder="Phone Number" required />
+    <button type="submit">Add Person</button>
+  </form>
+
+  <app-persons [users]="users"></app-persons>
+</div>
